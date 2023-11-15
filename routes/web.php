@@ -22,7 +22,7 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', function () {
     return view('./frontend.index',[
-        'title'=> 'Home',
+        'title'=> 'Beranda',
     ]);
 
 });
@@ -36,14 +36,20 @@ Route::get('/blog-single', function () {
 
 Route::get('/portfolio-details', function () {
     return view('./frontend.portfolio-details',[
-        'title'=> 'Home',
+        'title'=> 'Portofolio',
     ]);
 
 });
 
 Route::get('/pendaftaran', function () {
     return view('./frontend.pendaftaran',[
-        'title'=> 'Home',
+        'title'=> 'Pendaftaran',
+    ]);
+
+});
+Route::get('/daftaranggota', function () {
+    return view('dashboard.daftaranggota',[
+        'title'=> 'Daftar Anggota',
     ]);
 
 });

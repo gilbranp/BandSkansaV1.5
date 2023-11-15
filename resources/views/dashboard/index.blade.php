@@ -1,4 +1,4 @@
-<!doctype html>
+{{-- <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head><script src="../assets/js/color-modes.js"></script>
 
@@ -146,4 +146,11 @@
 <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="/js/dashboard.js"></script></body>
-</html>
+</html> --}}
+
+@extends('dashboard.layouts.main')
+
+@section('container')
+  <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+</main>
+@endsection
