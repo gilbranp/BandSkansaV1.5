@@ -186,13 +186,13 @@
     @endif
 
     <img class="mb-4" src="/img/logo-band.png" width="72" height="72">
-    <h1 class="h3 mb-3 fw-normal">Silahkan Daftar</h1>
+    <h1 class="h3 mb-3 fw-normal">Silahkan Login</h1>
     </div>
     <form action="/login" method="post">
     @csrf
     </div>
     <div class="form-floating">
-      <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required autofocus value="{{ old('name') }}">
+      <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required autofocus value="{{ old('email') }}">
       <label for="email">Email address</label>
       @error('email')
        <div class="invalid-feedback">

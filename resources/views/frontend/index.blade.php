@@ -52,7 +52,7 @@
             <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>Login</a>
           </li> --}}
 
-          @auth
+          {{-- @auth
           <li class="nav-item dropdown" style="padding-left: 15rem">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Selamat datang, {{ auth()->user()->name }}
@@ -73,7 +73,7 @@
           <li class="nav-item login-menu" style="padding-left: 15rem">
             <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>Login</a>
           </li>
-          @endauth
+          @endauth --}}
          
 
         </ul>
@@ -190,7 +190,7 @@
                   <div class="about-me pt-4 pt-md-0">
                     <div class="title-box-2">
                       <h5 class="title-left">
-                        Tentang Kami
+                        Profil Band
                       </h5>
                     </div>
                     <p class="lead">
@@ -203,10 +203,17 @@
                       pada saat ini pembina band smkn 1 bawang adalah bpk. fauzan akhmad mahanani dan bpk. andrian kristanto
                     </p>
                     <p class="lead">
-                      Visi....
+                      Visi
+                      menciptakan generasi muda yang cerdas, kreatif, berjiwa seni, berkarya dan berpestasi
+
                     </p>
                     <p class="lead">
-                      Misi....
+                      Misi
+                      1. meningkatkan pikiran yang kreatif dalam berkarya
+                      2. menjadi ajang menyalurkan bakat
+                      3. lebih memahami musik dan alat musik 
+                      4. melaksanakan program pendidikan akademik dibidang musik
+                      5. menjunjung tinggi profesionalisme dalam bermusik dan berorganisasi
                     </p>
                   </div>
                 </div>
@@ -836,5 +843,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

@@ -7,39 +7,39 @@
       <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+            <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="/admin-dashboard">
               <svg class="bi"><use xlink:href="#house-fill"/></svg>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#">
-              <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#">
-              <svg class="bi"><use xlink:href="#cart"/></svg>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="/daftaranggota">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-anggota">
               <svg class="bi"><use xlink:href="#people"/></svg>
-              Daftar Anggota
+               Management Anggota
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-jadwal">
+              <svg class="bi"><use xlink:href="#cart"/></svg>
+              Jadwal Latihan
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-pengelolaankonten">
+              <svg class="bi"><use xlink:href="#file-earmark"/></svg>
+              Pengelolaan Konten
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-kontakpendaftaran">
               <svg class="bi"><use xlink:href="#graph-up"/></svg>
-              Reports
+               Kontak & Pendaftaran
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-laporan">
               <svg class="bi"><use xlink:href="#puzzle"/></svg>
-              Integrations
+              Laporan & Analis
             </a>
           </li>
         </ul>
@@ -48,16 +48,16 @@
 
         <ul class="nav flex-column mb-auto">
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-pengaturan">
               <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
-              Settings
+              Pengaturan
             </a>
           </li>
 
           <form action="/logout" method="post">
               @csrf
               <button type="submit" class="nav-link d-flex align-items-center gap-2"><i class="bi bi-box-arrow-right">
-              </i>Logout
+              </i>Keluar
               </button>
           </form>
 

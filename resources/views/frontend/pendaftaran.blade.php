@@ -69,6 +69,8 @@
             <option value="drum">Drum</option>
             <option value="kendang">Kendang</option>
             <option value="keyboard">Keyboard</option>
+            <option value="keyboard">Saxophone</option>
+            <option value="Biola">Biola</option>
             <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
           </select>
         </div>
@@ -80,7 +82,7 @@
         </div>
 
         <!-- Tombol Pencetan untuk Menampilkan Informasi -->
-        <button type="button" class="btn btn-warning mb-3" onclick="toggleInfo()">Persyaratan</button>
+        {{-- <button type="button" class="btn btn-warning mb-3" onclick="toggleInfo()">Persyaratan</button>
 
         <!-- Informasi Persyaratan dan Proses Seleksi -->
         <div class="info-box" id="infoBox">
@@ -90,10 +92,31 @@
             dapat berkolaborasi dengan anggota band lainnya. Proses seleksi melibatkan audisi.
             Pastikan untuk mempersiapkan diri sebaik baiknya karena akan dilakukan pemfilteran best of the best.
           </p>
+        </div> --}}
+
+
+        <div class="row">
+          <div class="col d-flex justify-content-between">
+          <div>
+            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Syarat & Proses seleksi
+          </a>
+        </div>
+           <!-- Tombol Submit -->
+        <div>
+          <button type="submit" class="btn btn-primary">Daftar</button>
+        </div>
+          </div>
+
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Calon anggota band diharapkan memiliki pengetahuan dasar dalam memainkan alat musik pilihan dan
+            dapat berkolaborasi dengan anggota band lainnya. Proses seleksi melibatkan audisi.
+            Pastikan untuk mempersiapkan diri sebaik baiknya karena akan dilakukan pemfilteran best of the best.
+          </div>
         </div>
 
-        <!-- Tombol Submit -->
-        <button type="submit" class="btn btn-primary">Daftar</button>
       </form>
     </div>
   </div>

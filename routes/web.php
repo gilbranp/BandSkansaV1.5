@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -47,12 +48,6 @@ Route::get('/pendaftaran', function () {
     ]);
 
 });
-Route::get('/daftaranggota', function () {
-    return view('dashboard.daftaranggota',[
-        'title'=> 'Daftar Anggota',
-    ]);
-
-});
 
 // ->middleware('auth');
 
@@ -65,4 +60,23 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class,'index'])->middleware('auth');
+Route::get('/admin-dashboard', [DashboardController::class,'index'])->middleware('auth');
+// Route::get('/admin', [DashboardController::class,'index'])->middleware('auth');
+Route::get('/admin-anggota', [AnggotaController::class,'index'])->middleware('auth');
+
+Route::get('/admin-jadwal', [DashboardController::class,'jadwal'])->middleware('auth');
+Route::get('/admin-pengelolaankonten', [DashboardController::class,'pengelolaankonten'])->middleware('auth');
+Route::get('/admin-kontakpendaftaran', [DashboardController::class,'kontakpendaftaran'])->middleware('auth');
+Route::get('/admin-laporan', [DashboardController::class,'laporan'])->middleware('auth');
+Route::get('/admin-pengaturan', [DashboardController::class,'pengaturan'])->middleware('auth');
+Route::get('/admin', [DashboardController::class,'index'])->middleware('auth');
+Route::get('/admin-detail', [DashboardController::class,'detail'])->middleware('auth');
+// Route::get('/admin-edit', [DashboardController::class,'edit'])->middleware('auth');
+
+
+// Route::resource('/dashboard/posts', DashboardController::class)->middleware('auth');
+
+Route::resource('/admin-anggota', AnggotaController::class)->middleware('auth');
+Route::resource('/admin-edit', AnggotaController::class)->middleware('auth');
+
+
