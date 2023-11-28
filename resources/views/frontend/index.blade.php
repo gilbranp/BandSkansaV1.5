@@ -40,7 +40,7 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar">
+      {{-- <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">Profil Band</a></li>
@@ -48,39 +48,16 @@
           <li><a class="nav-link scrollto " href="#work">Galeri</a></li>
           <li><a class="nav-link scrollto " href="#blog">Blog</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          {{-- <li class="nav-item login-menu" style="padding-left: 15rem">
-            <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>Login</a>
-          </li> --}}
-
-          {{-- @auth
-          <li class="nav-item dropdown" style="padding-left: 15rem">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Selamat datang, {{ auth()->user()->name }}
-            </a>
-            <ul class="dropdown-menu" style="margin-right: 15rem">
-              <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <form action="/logout" method="post">
-                  @csrf
-                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-right"></i>Keluar</button>
-                </form>
-                
-              </li>
-            </ul>
-          </li>
-          @else
-          <li class="nav-item login-menu" style="padding-left: 15rem">
-            <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>Login</a>
-          </li>
-          @endauth --}}
+        
          
 
         </ul>
 
         <i class="bi bi-list mobile-nav-toggle"></i>
 
-      </nav>
+      </nav> --}}
+@include('frontend.layouts.navbar')
+
       <!-- .navbar -->
     {{-- <ul class="navbar-nav ms-auto">
         <li class="nav-item">
@@ -117,107 +94,51 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Profil Band</h1>
+    </div>
+  </div>
 
-                    {{-- ANGGOTA 1 --}}
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Radenta Gilbran S</span></p>
-                        <p><span class="title-s">Role: </span> <span>Vocal</span></p>
-                        <p><span class="title-s">Genre: </span> <span>Pop</span></p>
-                      </div>
-                    </div>
-                    
-                    {{-- ANGGOTA 2 --}}
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/eja.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Maharani Eja</span></p>
-                        <p><span class="title-s">Role: </span> <span>Orgen</span></p>
-                        <p><span class="title-s">Genre: </span> <span>All</span></p>
-                      </div>
-                    </div>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="img/logo-band.png" class="img-fluid rounded-circle mt-4" style="width: 250px" alt="Foto Pembina">
+    </div>
+    <div class="col-md-8 mt-4">
+      <h2>Pembina</h2>
+      <p>Nama: John Doe</p>
+      <p>Jabatan: Ketua Band</p>
+      <p>Sejarah Band:</p>
+      <p> dalam smkn 1 bawang terdapat banyak extrakurikuler, salah satunya extrakurikuler band
+        extrakurikuler band sudah ada sejak dahulu, namun untuk rock ballery art ini dibuat pada tahun 2017 oleh bpk. willy ferdiansyah selaku pembina pada saat itu
+        saat ini rock ballery art memasuki tahun ke 7
+        band smkn 1 bawang pernah mengikuti parade dan festival musik 
+        pada saat ini pembina band smkn 1 bawang adalah bpk. fauzan akhmad mahanani dan bpk. andrian kristanto</p>
+    </div>
+  </div>
 
-                    {{-- ANGGOTA 3 --}}
+  <div class="row">
+    <div class="col-12">
+      <h2>Visi & Misi</h2>
+      <p>Visi:</p>
+      <p>
+        menciptakan generasi muda yang cerdas, kreatif, berjiwa seni, berkarya dan berpestasi</p>
+      <p>Misi:</p>
+      <p> 1. meningkatkan pikiran yang kreatif dalam berkarya<br>
+        2. menjadi ajang menyalurkan bakat<br>
+        3. lebih memahami musik dan alat musik <br> 
+        4. melaksanakan program pendidikan akademik dibidang musik <br>
+        5. menjunjung tinggi profesionalisme dalam bermusik dan berorganisasi</p>
+    </div>
+  </div>
 
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Radenta Gilbran S</span></p>
-                        <p><span class="title-s">Role: </span> <span>Vocal</span></p>
-                        <p><span class="title-s">Genre: </span> <span>Pop</span></p>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  {{-- <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">85%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PHP</span> <span class="pull-right">50%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div> --}}
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Profil Band
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      sejarah band smkn 1 bawang "rock ballery art'
-
-                      dalam smkn 1 bawang terdapat banyak extrakurikuler, salah satunya extrakurikuler band
-                      extrakurikuler band sudaj ada sejak dahulu, namun untuk rock ballery art ini dibuat pada tahun 2017 oleh bpk. willy ferdiansyah selaku pembina pada saat itu
-                      saat ini rock ballery art memasuki tahun ke 7
-                      band smkn 1 bawang pernah mengikuti parade dan festival musik 
-                      pada saat ini pembina band smkn 1 bawang adalah bpk. fauzan akhmad mahanani dan bpk. andrian kristanto
-                    </p>
-                    <p class="lead">
-                      Visi
-                      menciptakan generasi muda yang cerdas, kreatif, berjiwa seni, berkarya dan berpestasi
-
-                    </p>
-                    <p class="lead">
-                      Misi
-                      1. meningkatkan pikiran yang kreatif dalam berkarya
-                      2. menjadi ajang menyalurkan bakat
-                      3. lebih memahami musik dan alat musik 
-                      4. melaksanakan program pendidikan akademik dibidang musik
-                      5. menjunjung tinggi profesionalisme dalam bermusik dan berorganisasi
-                    </p>
-                  </div>
-                </div>
-              </div>
+  <div class="row">
+    <div class="modal-footer">
+      <a href="/profil-anggotaa" class="btn btn-primary">Lihat Anggota Lengkap</a>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
@@ -244,7 +165,7 @@
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+                <span class="ico-circle"><i class="bi bi-mic"></i></span>
               </div>
               <div class="service-content">
                 <h2 class="s-title">Tempat Latihan</h2>
@@ -265,6 +186,7 @@
                 <p class="s-description text-center">
                   Biasanya kami melakukan latihan rutin (Extra) pada hari kamis
                   tepatnya setelah selesai KBM hingga maxsimal latihan yaitu sampai dengan jam 17.00
+                  <a href="/kalender-latihan"><h6>Kalender Jadwal</h6></a>
                 </p>
               </div>
             </div>
@@ -330,11 +252,19 @@
                 </p>
               </div>
             </div>
-          </div> --}}
+          {{-- </div> --}}
 
 
         </div>
       </div>
+
+
+
+
+      {{-- @include('frontend.layouts.kalender') --}}
+      {{-- kalender --}}
+      
+
     </section><!-- End Services Section -->
 
     <!-- ======= Counter Section ======= -->
@@ -825,6 +755,68 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+
+  <div class="container mb-5">
+    <h1 class="text-center my-5 ">SEPUTAR PERTANYAAN</h1>
+
+    <div id="accordion">
+      <!-- Question 1 -->
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            Pertanyaan 1: Kapan jadwal latihan band?
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+               <i class="bi bi-arrow-down-short"></i>
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            Jawaban: Latihan band kami dilakukan setiap Senin dan Kamis sore pukul 15.00 - 17.00 di ruang musik sekolah.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            Pertanyaan 2: Bagaimana cara bergabung dengan band?
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+             <i class="bi bi-arrow-down-short"></i>
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            Jawaban: Untuk bergabung dengan band, silakan hubungi koordinator ekstrakurikuler musik di ruang musik sekolah pada hari Senin atau Kamis.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+             Pertanyaan 3: Apa persyaratan untuk bergabung dengan band?
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <i class="bi bi-arrow-down-short"></i>
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Jawaban: Persyaratan utama adalah memiliki minat dalam musik, serta kemauan untuk belajar dan berkolaborasi dengan anggota band lainnya.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
 @include('frontend.partials.footer')
 

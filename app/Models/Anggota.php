@@ -14,5 +14,7 @@ class Anggota extends Model
         'telp',
         'role',
         'genre',
+        'deskripsi',
+        'img'
     ];
 }

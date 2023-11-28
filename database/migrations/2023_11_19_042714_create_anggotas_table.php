@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('telp');
             $table->string('role');
             $table->string('genre');
+            $table->string('img');
+            $table->string('deskripsi');
 
             $table->timestamps();
         });

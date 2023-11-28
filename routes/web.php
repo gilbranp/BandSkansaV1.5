@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Anggota;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,10 @@ use App\Http\Controllers\RegisterController;
 // });
 
 Route::get('/', function () {
+    $anggotas = Anggota::orderBy('created_at', 'DESC')->get();
     return view('./frontend.index',[
-        'title'=> 'Beranda',
+      'anggota' => $anggotas,
+        'title'=> 'Beranda'
     ]);
 
 });
@@ -31,6 +34,12 @@ Route::get('/', function () {
 Route::get('/blog-single', function () {
     return view('./frontend.blog-single',[
         'title'=> 'Home',
+    ]);
+
+});
+Route::get('/kalender-latihan', function () {
+    return view('./frontend.kalender-latihan',[
+        'title'=> 'Kalender Latihan',
     ]);
 
 });
@@ -45,6 +54,16 @@ Route::get('/portfolio-details', function () {
 Route::get('/pendaftaran', function () {
     return view('./frontend.pendaftaran',[
         'title'=> 'Pendaftaran',
+    ]);
+
+});
+
+Route::get('/profil-anggotaa', function () {
+    $anggotas = Anggota::orderBy('created_at', 'DESC')->get();
+    return view('./frontend.profil-anggota',[
+        'anggota' => $anggotas,
+        'title'=> 'Profil-Anggota',
+        
     ]);
 
 });

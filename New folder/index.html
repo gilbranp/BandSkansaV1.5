@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main id="cardContainer">
+        <div class="card" >
+          <img src="./img.jpg" alt="">
+          <div class="card-content">
+            <h2>
+              Radenta Lorem, ipsum dolor.
+            </h2>
+            <h4 class="role">Role : Vocal</h4>
+            <h4 class="genre">Genre : Rock</h4>
+            <p class="button">
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias quasi omnis recusandae velit ut commodi atque quod perspiciatis laborum!"
+                </p>
+          </div>
+        </div>
+        </div>
+      </main>
+
+      <script>
+        const cardData = [
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+            { imgSrc: "./img.jpg", name: "Nama 1", role: "Role 1", genre: "Genre 1", description: "Deskripsi 1" },
+        ];
+
+        function createCard(data) {
+            const cardContainer = document.getElementById("cardContainer");
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const img = document.createElement("img");
+            img.src = data.imgSrc;
+            img.alt = "";
+
+            const cardContent = document.createElement("div");
+            cardContent.className = "card-content";
+
+            const h2 = document.createElement("h2");
+            h2.textContent = data.name;
+
+            const role = document.createElement("h4");
+            role.className = "role";
+            role.textContent = "Role: " + data.role;
+
+            const genre = document.createElement("h4");
+            genre.className = "genre";
+            genre.textContent = "Genre: " + data.genre;
+
+            const p = document.createElement("p");
+            p.className = "button";
+            p.textContent = data.description;
+
+            cardContent.appendChild(h2);
+            cardContent.appendChild(role);
+            cardContent.appendChild(genre);
+            cardContent.appendChild(p);
+
+            card.appendChild(img);
+            card.appendChild(cardContent);
+
+            cardContainer.appendChild(card);
+        }
+
+        for (let i = 0; i < cardData.length; i++) {
+    const data = cardData[i];
+    createCard(data);
+}
+    </script>
+</body>
+</html>

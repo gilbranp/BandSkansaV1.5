@@ -38,7 +38,7 @@
 
         <!--  -->
 
-<form action="{{ route('admin-anggota.store') }}" method="POST">
+<form action="{{ route('admin-anggota.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
         <div class="form-group">
         <label>Nama</label>
@@ -60,10 +60,16 @@
         <label>Genre</label>
         <input type="text" name="genre" class="form-control" placeholder="Pop,Koplo,Metal,dll" required>
       </div>
+      <div class="form-group">
+        <label>Deskripsi</label>
+        <textarea type="text" name="deskripsi" class="form-control" placeholder="Deskripsi tentang anda" required></textarea>
+      </div>
+      <label for="formFile" class="form-label">Unggah Foto</label>
+  <input class="form-control" name="img" type="file" id="formFile" required>
     </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <input type="submit" value="Simpan" name="simpan" class="btn btn-primary">
+        <input type="submit" value="Tambah" name="simpan" class="btn btn-primary">
 
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>

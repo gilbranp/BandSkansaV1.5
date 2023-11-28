@@ -31,9 +31,22 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        Anggota::create($request->all());
+    
+        $input = $request->all();
+        if ($image = $request->file('img')) {
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['img'] = "$profileImage";
+        }
+        else{
+            unset($input['img']);
+        }
+        
+        Anggota::create($input);
 
         return redirect()->route('admin-anggota.index')->with('sukses', 'Data anggota berhasil ditambahkan');
+        
     }
 
     /**
@@ -43,6 +56,8 @@ class AnggotaController extends Controller
     {
         $anggota = Anggota::findOrFail($id);
         return view('dashboard.detail', compact('anggota'));
+
+        
     }
 
     /**
@@ -69,16 +84,27 @@ class AnggotaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+    // public function destroy(string $id)
+    // {
+    //     $anggota = Anggota::findOrFail($id);
+    //     $anggota->delete();
+    //     return redirect()->route('admin-anggota.index')->with('sukses', 'Data anggota berhasil dihapus');
+    // }
+
     public function destroy(string $id)
-    {
-        $anggota = Anggota::findOrFail($id);
-        $anggota->delete();
-        return redirect()->route('admin-anggota.index')->with('sukses', 'Data anggota berhasil dihapus');
+{
+    $anggota = Anggota::findOrFail($id);
+
+    // Menghapus gambar dari folder
+    $gambarPath = public_path('images/' . $anggota->img);
+    if (file_exists($gambarPath)) {
+        unlink($gambarPath); // Menghapus file gambar dari folder
     }
 
-    public function dataAnggota(){
-        $anggota = Anggota::all();
-            return view('frontend.index',compact(['anggota']));
-        }
+    $anggota->delete(); // Menghapus entitas dari database
+
+    return redirect()->route('admin-anggota.index')->with('sukses', 'Data anggota berhasil dihapus');
+}
+
     }
 

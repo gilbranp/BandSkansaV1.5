@@ -20,7 +20,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-jadwal">
-              <svg class="bi"><use xlink:href="#cart"/></svg>
+              <svg class="bi"><use xlink:href="#calendar3"/></svg>
               Jadwal Latihan
             </a>
           </li>
@@ -32,13 +32,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-kontakpendaftaran">
-              <svg class="bi"><use xlink:href="#graph-up"/></svg>
+              <svg class="bi"><use xlink:href="#plus-circle"/></svg>
                Kontak & Pendaftaran
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-laporan">
-              <svg class="bi"><use xlink:href="#puzzle"/></svg>
+              <svg class="bi"><use xlink:href="#graph-up"/></svg>
               Laporan & Analis
             </a>
           </li>
