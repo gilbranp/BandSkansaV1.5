@@ -217,7 +217,7 @@
       </label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
-    <small>Tidak Punya Akun? <a href="/register">Daftar</a></small>
+    {{-- <small>Tidak Punya Akun? <a href="/register">Daftar</a></small> --}}
     <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2017-<?= date('Y')?></p>
   </form>
 </main>

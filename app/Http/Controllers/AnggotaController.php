@@ -34,7 +34,7 @@ class AnggotaController extends Controller
     
         $input = $request->all();
         if ($image = $request->file('img')) {
-            $destinationPath = 'images/';
+            $destinationPath = 'images/imganggota/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['img'] = "$profileImage";
@@ -96,7 +96,7 @@ class AnggotaController extends Controller
     $anggota = Anggota::findOrFail($id);
 
     // Menghapus gambar dari folder
-    $gambarPath = public_path('images/' . $anggota->img);
+    $gambarPath = public_path('images/imganggota/' . $anggota->img);
     if (file_exists($gambarPath)) {
         unlink($gambarPath); // Menghapus file gambar dari folder
     }

@@ -10,13 +10,14 @@
     type: 'line',
     data: {
       labels: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
+        'Januari',
+        'Februari',
+        'Maret',
         'Wednesday',
         'Thursday',
         'Friday',
-        'Saturday'
+        'Saturday',
+        'Agustus'
       ],
       datasets: [{
         data: [

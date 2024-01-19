@@ -1,3 +1,5 @@
+
+{{-- @dd($pengelolaan) --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>DevFolio Bootstrap Portfolio Template - Portfolio Details</title>
+  <title>Band Skansa <?=date('Y')?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -14,13 +16,15 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  {{-- <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet"> --}}
+  <link href="{{ asset('assets/css/galeri.css') }}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: DevFolio
@@ -34,7 +38,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top bg-dark">
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="index.html">Band Skansa</a></h1>
@@ -43,7 +47,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="/#hero">Home</a></li>
+          <li><a class="nav-link scrollto " href="/#home">Home</a></li>
           <li><a class="nav-link scrollto" href="/#about">Profil Band</a></li>
           <li><a class="nav-link scrollto" href="/#services">Jadwal Latihan</a></li>
           <li><a class="nav-link scrollto " href="/#work">Galeri</a></li>
@@ -78,12 +82,12 @@
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="hero-title mb-4">Portfolio Details</h2>
+          <h2 class="hero-title mb-4">Galeri Detail</h2>
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
               <a href="#">Home</a>
             </li>
-            <li class="breadcrumb-item active">Portfolio Details</li>
+            <li class="breadcrumb-item active">Galeri Detail</li>
           </ol>
         </div>
       </div>
@@ -96,43 +100,44 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="row">
 
-          <div class="col-lg-8">
+          <div class="col-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio-details-1.jpg" alt="">
+                  <img class="img-detail" src="{{ asset('images/imggaleri/' . $pengelolaan->img) }}" alt="Konten Foto">
+
                 </div>
 
-                <div class="swiper-slide">
+                {{-- <div class="swiper-slide">
                   <img src="assets/img/portfolio-details-2.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio-details-3.jpg" alt="">
-                </div>
+                </div> --}}
 
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Informasi</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Acara</strong>: {{ $pengelolaan->namaacara }}</li>
+                <li><strong>Tempat</strong>: {{ $pengelolaan->tempat }}</li>
+                <li><strong>Tanggal</strong>: {{ $pengelolaan->tanggal }}</li>
+                <li><strong>Link Vidio</strong>: <a href="{{ $pengelolaan->url }}">{{ $pengelolaan->url }}</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Detail</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {{ $pengelolaan->detail }}
               </p>
             </div>
           </div>
@@ -148,7 +153,7 @@
   @include('frontend.partials.footer')
   <!-- End  Footer -->
 
-  <div id="preloader"></div>
+  {{-- <div id="preloader"></div> --}}
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

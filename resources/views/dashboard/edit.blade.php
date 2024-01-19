@@ -29,26 +29,26 @@
     <label style="margin-right: 30px;">Nama</label>
     <input type="text" name="nama" class="form-control" required placeholder="Masukkan Nama" value="{{ $anggota->nama }}">
   </div>
-  <div class="form-group" style="display: flex; align-items: center;">
+  <div class="form-group mt-1" style="display: flex; align-items: center;">
     <label style="margin-right: 35px;">Kelas</label>
     <input type="text" name="kelas" class="form-control" required placeholder="Masukkan Kelas" value="{{ $anggota->kelas }}">
   </div>
 
 
-  <div class="form-group" style="display: flex; align-items: center;">
+  <div class="form-group mt-1" style="display: flex; align-items: center;">
     <label style="margin-right: 43px;">Telp</label>
     <input type="text" name="telp" class="form-control" required placeholder="Ex : 08xxxxx" value="{{ $anggota->telp }}">
 </div>
 
-  <div class="form-group" style="display: flex; align-items: center;">
+  <div class="form-group mt-1" style="display: flex; align-items: center;">
     <label style="margin-right: 41px;">Role</label>
     <input type="text" name="role" class="form-control" required placeholder="Ex : Gitar" value="{{ $anggota->role }}">
   </div>
-  <div class="form-group" style="display: flex; align-items: center;">
+  <div class="form-group mt-1" style="display: flex; align-items: center;">
     <label style="margin-right: 30px;">Genre</label>
     <input type="text" name="genre" class="form-control" required placeholder="Pop,Koplo,Metal,dll" value="{{ $anggota->genre }}">
   </div>
-  <div class="form-group" style="display: flex; align-items: center;">
+  <div class="form-group mt-1" style="display: flex; align-items: center;">
     <label style="margin-right: 8px;">Deskripsi</label>
     <textarea type="text" name="deskripsi" class="form-control" required placeholder="Deskripsi tentang anda" >{{ $anggota->deskripsi }} </textarea>
   </div>

@@ -12,12 +12,14 @@
               Dashboard
             </a>
           </li>
+         
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-anggota">
               <svg class="bi"><use xlink:href="#people"/></svg>
                Management Anggota
             </a>
-          </li>
+          </li> 
+          
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-jadwal">
               <svg class="bi"><use xlink:href="#calendar3"/></svg>
@@ -30,12 +32,20 @@
               Pengelolaan Konten
             </a>
           </li>
+
+          {{-- @can('superadmin') --}}
+            
+         
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-kontakpendaftaran">
               <svg class="bi"><use xlink:href="#plus-circle"/></svg>
                Kontak & Pendaftaran
             </a>
           </li>
+          
+           {{-- @endcan --}}
+
+           @can('superadmin')
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-laporan">
               <svg class="bi"><use xlink:href="#graph-up"/></svg>
@@ -43,10 +53,13 @@
             </a>
           </li>
         </ul>
-
+          @endcan
         <hr class="my-3">
 
         <ul class="nav flex-column mb-auto">
+
+          @can('superadmin')
+          
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-pengaturan">
               <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
@@ -54,13 +67,13 @@
             </a>
           </li>
 
-          <form action="/logout" method="post">
-              @csrf
+          @endcan
+
+          <a class="link-underline link-underline-opacity-0" href="/logout">
               <button type="submit" class="nav-link d-flex align-items-center gap-2"><i class="bi bi-box-arrow-right">
               </i>Keluar
               </button>
-          </form>
-
+          </a>
         </ul>
       </div>
     </div>

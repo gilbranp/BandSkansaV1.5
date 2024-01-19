@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ContactMessage;
+use App\Models\Pengaturan;
 
 class DashboardController extends Controller
 {
    public function index()
    {
+    // $pengaturan = Pengaturan::orderBy('created_at', 'DESC')->get();
+    //     return view("dashboard.layouts.header", compact('pengaturan'));
     return view('/dashboard/index');
    }
    // public function anggota()
@@ -24,7 +28,10 @@ class DashboardController extends Controller
    }
    public function kontakpendaftaran()
    {
-    return view('/dashboard/kontakpendaftaran');
+      $pesan = ContactMessage::all();
+    return view('/dashboard/kontakpendaftaran',[
+      'pesan' => $pesan
+    ]);
    }
    public function laporan()
    {

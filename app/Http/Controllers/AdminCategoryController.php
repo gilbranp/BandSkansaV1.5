@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PengelolaanKonten;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class Pengelola extends Controller
+class AdminCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return 'ini adalah halaman categories';
     }
 
     /**
@@ -34,7 +34,7 @@ class Pengelola extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PengelolaanKonten $pengelolaanKonten)
+    public function show(category $category)
     {
         //
     }
@@ -42,7 +42,7 @@ class Pengelola extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PengelolaanKonten $pengelolaanKonten)
+    public function edit(category $category)
     {
         //
     }
@@ -50,7 +50,7 @@ class Pengelola extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PengelolaanKonten $pengelolaanKonten)
+    public function update(Request $request, category $category)
     {
         //
     }
@@ -58,7 +58,7 @@ class Pengelola extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PengelolaanKonten $pengelolaanKonten)
+    public function destroy(category $category)
     {
         //
     }

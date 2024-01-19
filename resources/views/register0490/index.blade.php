@@ -199,6 +199,23 @@
       </div>
       @enderror
     </div>
+    <div class="dropdown-center">
+      <select name="hakakses" class="dropdown-toggle w-100" required>
+          <option value="" disabled selected>== SILAHKAN PILIH SALAH SATU ==</option>
+          <option value="superadmin">Super Admin</option>
+          <option value="admin">Admin</option>
+          <option value="editor">Editor</option>
+      </select>
+  </div>
+  
+
+    {{-- <div class="dropdown-center">
+     <select name="hakakses" id="hakakses" required>
+     <option class="dropdown-toggle">====Tidak Ada Data Yang Dipilih====</option>
+     <option value="SuperAdmin">Super Admin</option>
+     <option value="Admin">Admin</option>
+    </select>
+    </div> --}}
 
     <div class="form-check text-start my-3">
       <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">

@@ -21,13 +21,14 @@ class RegisterController extends Controller
         'name' => 'required|max:255',
         'username' => ['required','min:3','max:255','unique:users'],
         'email' => 'required|email:dns|unique:users',
-        'password' => 'required|min:5|max:255'
+        'password' => 'required|min:5|max:255',
+        'hakakses' => 'required|in:superadmin,admin,editor' // Tambahkan validasi untuk hakakses
        ]);
 
     //    $validateData['password'] = bcrypt($validateData['password']);
        $validateData['password'] = Hash::make($validateData['password']);
        User::create($validateData);
     //   $request->session()->flash('sukses', 'Registrasi berhasil! Silahkan login');
-       return redirect('/login')->with('sukses', 'Registrasi berhasil! Silahkan login');
+       return redirect('/admin-pengelolaanadmin')->with('sukses', 'Data admin berhasil ditambahkan');
     }
 }

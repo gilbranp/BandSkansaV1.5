@@ -45,11 +45,17 @@
   <div class="row justify-content-center">
     <div class="col-md-6">
       <h2 class="text-center mb-4">Formulir Pendaftaran</h2>
-      <form>
+      @if (Session::has('sukses'))
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('sukses') }}
+        </div>
+        @endif
+      <form action="{{ route('admin-calonanggota.store') }}" method="POST">
+        @csrf
         <!-- Nama -->
         <div class="mb-3">
-          <label for="nama" class="form-label">Nama Lengkap</label>
-          <input type="text" class="form-control" id="nama" name="nama" required>
+          <label for="namalengkap" class="form-label">Nama Lengkap</label>
+          <input type="text" class="form-control" id="nama" name="namalengkap" required>
         </div>
 
         <!-- Alamat Email -->
@@ -61,7 +67,7 @@
         <!-- Alat Musik Pilihan -->
         <div class="mb-3">
           <label for="alatMusik" class="form-label">Posisi Pilihan</label>
-          <select class="form-select" id="alatMusik" name="alatMusik" required>
+          <select class="form-select" id="alatMusik" name="posisi" required>
             <option value="" disabled selected>Pilih Posisi</option>
             <option value="vocal">Vocal</option>
             <option value="gitar">Gitar</option>
@@ -69,8 +75,8 @@
             <option value="drum">Drum</option>
             <option value="kendang">Kendang</option>
             <option value="keyboard">Keyboard</option>
-            <option value="keyboard">Saxophone</option>
-            <option value="Biola">Biola</option>
+            <option value="saxophone">Saxophone</option>
+            <option value="biola">Biola</option>
             <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
           </select>
         </div>

@@ -16,7 +16,7 @@
 
   <div class="row">
     <div class="col-md-4">
-      <img src="/images/{{ $anggota->img }}" class="img-fluid  mt-4" style="width: 440px; height: 440px" alt="Foto Pembina">
+      <img src="/images/imganggota/{{ $anggota->img }}" class="img-fluid  mt-4" style="width: 440px; height: 440px" alt="Foto Pembina">
     </div>
     <div class="col-md-8 mt-1">
       
@@ -56,5 +56,6 @@
     </div>
   </div>
 
+  <a href="/admin-anggota"><div class="btn btn-secondary">Kembali</div></a>
   
 @endsection

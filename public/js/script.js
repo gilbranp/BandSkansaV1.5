@@ -215,7 +215,7 @@ const myEvents = JSON.parse(localStorage.getItem('events')) || [
   calendar.render();
 
   // const form = document.querySelector('form'); ini yanng membuat error 
-  const form = document.querySelector('form');
+  const form= document.querySelector('form');
 
   form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevent default form submission
