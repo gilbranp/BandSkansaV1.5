@@ -97,35 +97,33 @@
   <main id="main">
 
     <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
+    <section id="portfolio-details" class="portfolio-details py-5">
       <div class="container">
-
+    
         <div class="row">
-
-          <div class="col-8">
+          <div class="col-lg-8 col-md-12 mb-4">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
+    
                 <div class="swiper-slide">
-                  <img class="img-detail" src="{{ asset('images/imggaleri/' . $pengelolaan->img) }}" alt="Konten Foto">
-
+                  <img class="img-fluid img-detail" src="{{ asset('images/imggaleri/' . $pengelolaan->img) }}" alt="Konten Foto">
                 </div>
-
+    
                 {{-- <div class="swiper-slide">
                   <img src="assets/img/portfolio-details-2.jpg" alt="">
                 </div>
-
+    
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio-details-3.jpg" alt="">
                 </div> --}}
-
+    
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
-
-          <div class="col-4">
-            <div class="portfolio-info">
+    
+          <div class="col-lg-4 col-md-12">
+            <div class="portfolio-info mb-4">
               <h3>Informasi</h3>
               <ul>
                 <li><strong>Acara</strong>: {{ $pengelolaan->namaacara }}</li>
@@ -136,16 +134,16 @@
             </div>
             <div class="portfolio-description">
               <h2>Detail</h2>
-              <p>
+              <p class="text-break">
                 {{ $pengelolaan->detail }}
               </p>
             </div>
           </div>
-
         </div>
-
+    
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section>
+    <!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
