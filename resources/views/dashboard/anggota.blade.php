@@ -193,9 +193,11 @@
             {{ Session::get('sukses') }}
         </div>
         @endif
-        <table class="table table-bordered table-hover">
-            <thead class="table-primary">
-                <tr>
+        <div class="container mt-5">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead class="table-primary">
+                  <tr>
                     <th>NO</th>
                     <th>Nama</th>
                     <th>Kelas</th>
@@ -203,38 +205,40 @@
                     <th>Role</th>
                     <th>Genre</th>
                     <th>OPSI</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @if ($anggotas->count() > 0)
-                @foreach ($anggotas as $anggota )
-                <tr>
-                    <td class="align-middle">{{ $loop->iteration }}</td>
-                    <td class="align-middle">{{ $anggota->nama }}</td>
-                    <td class="align-middle">{{ $anggota->kelas }}</td>
-                    <td class="align-middle">{{ $anggota->telp }}</td>
-                    <td class="align-middle">{{ $anggota->role }}</td>
-                    <td class="align-middle">{{ $anggota->genre }}</td>
-                    <td class="align-middle">
-                        <a href="{{ route('admin-anggota.show', $anggota->id) }}" class="btn btn-success">DETAIL</a>
-                        <a href="{{ route('admin-anggota.edit', $anggota->id) }}" class="btn btn-warning">EDIT</a>
-                        <form action="{{ route('admin-anggota.destroy', $anggota->id) }}" method="POST" type="button"
-                            class="btn btn-danger p-0" onsubmit="return confirm('Yakin ingin menghapus?')">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger m-0">Hapus</button>
-                        </form>
-
-                    </td>
-                </tr>
-                @endforeach
-                @else
-                <tr>
-                    <td class="text-center" colspan="7">Tidak Ada Data Yang Tersimpan</td>
-                </tr>
-                @endif
-            </tbody>
+                  </tr>
+                </thead>
+                <tbody>
+                  @if ($anggotas->count() > 0)
+                    @foreach ($anggotas as $anggota)
+                      <tr>
+                        <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle">{{ $anggota->nama }}</td>
+                        <td class="align-middle">{{ $anggota->kelas }}</td>
+                        <td class="align-middle">{{ $anggota->telp }}</td>
+                        <td class="align-middle">{{ $anggota->role }}</td>
+                        <td class="align-middle">{{ $anggota->genre }}</td>
+                        <td class="align-middle">
+                          <div class="d-flex flex-column flex-md-row">
+                            <a href="{{ route('admin-anggota.show', $anggota->id) }}" class="btn btn-success mb-2 mb-md-0 me-md-2">DETAIL</a>
+                            <a href="{{ route('admin-anggota.edit', $anggota->id) }}" class="btn btn-warning mb-2 mb-md-0 me-md-2">EDIT</a>
+                            <form action="{{ route('admin-anggota.destroy', $anggota->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus?')" class="m-0 p-0 d-inline">
+                              @csrf
+                              @method('DELETE')
+                              <button class="btn btn-danger">Hapus</button>
+                            </form>
+                          </div>
+                        </td>
+                      </tr>
+                    @endforeach
+                  @else
+                    <tr>
+                      <td class="text-center" colspan="7">Tidak Ada Data Yang Tersimpan</td>
+                    </tr>
+                  @endif
+                </tbody>
+              </table>
+            </div>
+          </div>
 
             </form>
         </table>

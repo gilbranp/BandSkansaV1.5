@@ -130,8 +130,11 @@
             {{ Session::get('sukses') }}
         </div>
         @endif
-        <table class="table table-bordered table-hover">
-            <thead class="table-primary">
+        
+        <div class="container mt-5">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead class="table-primary">
                 <tr>
                     <th>NO</th>
                     <th>Nama</th>
@@ -173,6 +176,8 @@
 
             </form>
         </table>
+            </div>
+        </div>
     </div>
 </div>
 
