@@ -45,47 +45,66 @@
         </div>
     </div> --}}
 
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: 24px;">Header:</label>
-            <input type="text" name="namaheader" class="form-control" placeholder="Bagian Header" value="{{ $pengaturan->namaheader }}" required>
+    <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Header:</label>
+        <div class="col-sm-10">
+          <input type="text" name="namaheader" class="form-control" placeholder="Bagian Header" value="{{ $pengaturan->namaheader }}" required>
         </div>
-        <div class="form-group mt-2" style="display: flex; align-items: center;">
-            <label style="margin-right: 15px;">Pembina:</label>
-            <input name="namapembina" class="form-control" placeholder="Masukkan Nama Untuk Pembina" value="{{ $pengaturan->namapembina }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Pembina:</label>
+        <div class="col-sm-10">
+          <input name="namapembina" class="form-control" placeholder="Masukkan Nama Untuk Pembina" value="{{ $pengaturan->namapembina }}" required>
         </div>
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: -30px;">Halaman Depan:</label>
-            <input name="namadepan" class="form-control" placeholder="Masukkan Nama Untuk Halaman Utama" value="{{ $pengaturan->namadepan }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Halaman Depan:</label>
+        <div class="col-sm-10">
+          <input name="namadepan" class="form-control" placeholder="Masukkan Nama Untuk Halaman Utama" value="{{ $pengaturan->namadepan }}" required>
         </div>
-
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: 25px;">Alamat:</label>
-            <input name="alamat" class="form-control" placeholder="Masukkan Alamat" value="{{ $pengaturan->alamat }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Alamat:</label>
+        <div class="col-sm-10">
+          <input name="alamat" class="form-control" placeholder="Masukkan Alamat" value="{{ $pengaturan->alamat }}" required>
         </div>
-
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: 32px;">No Hp:</label>
-            <input type="number" name="nohp" minlength="12" maxlength="13" class="form-control" placeholder="Contoh : +628xxxx" value="{{ $pengaturan->nohp }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">No Hp:</label>
+        <div class="col-sm-10">
+          <input type="number" name="nohp" minlength="12" maxlength="13" class="form-control" placeholder="Contoh : +628xxxx" value="{{ $pengaturan->nohp }}" required>
         </div>
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: 36px;">Email:</label>
-            <input type="email" name="email" class="form-control" placeholder="Contoh : gilbran@gmail.com" value="{{ $pengaturan->email }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Email:</label>
+        <div class="col-sm-10">
+          <input type="email" name="email" class="form-control" placeholder="Contoh : gilbran@gmail.com" value="{{ $pengaturan->email }}" required>
         </div>
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: -5px;">Desk Depan:</label>
-            <input name="deskdepan" class="form-control" placeholder="Masukkan Deskripsi Untuk Halaman Depan" value="{{ $pengaturan->deskdepan }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Desk Depan:</label>
+        <div class="col-sm-10">
+          <input name="deskdepan" class="form-control" placeholder="Masukkan Deskripsi Untuk Halaman Depan" value="{{ $pengaturan->deskdepan }}" required>
         </div>
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: -5px;">Desk Kontak:</label>
-            <input name="deskkontak" class="form-control" placeholder="Masukkan Deskripsi Untuk Section Kontak" value="{{ $pengaturan->deskkontak }}" required>
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Desk Kontak:</label>
+        <div class="col-sm-10">
+          <input name="deskkontak" class="form-control" placeholder="Masukkan Deskripsi Untuk Section Kontak" value="{{ $pengaturan->deskkontak }}" required>
         </div>
-        <div class="form-group" style="display: flex; align-items: center;">
-            <label style="margin-right: -17px;">Foto Pembina:</label>
-            <input class="form-control" name="imgpembina" type="file" id="formFile" value="{{ $pengaturan->imgpembina }}">
+      </div>
+      <div class="row mb-1">
+        <label class="col-sm-2 col-form-label">Foto Pembina:</label>
+        <div class="col-sm-10">
+          <input class="form-control" name="imgpembina" type="file" id="formFile" value="{{ $pengaturan->imgpembina }}">
         </div>
-        
-   <input type="submit" value="Simpan" name="edit" class="btn btn-warning mt-4">
-   <a href="/admin-pengaturan"><div class="btn btn-secondary mt-4">Refresh</div></a>
+      </div>
+      <div class="row mb-1">
+        <div class="col-sm-10 offset-sm-2">
+          <input type="submit" value="Simpan" name="edit" class="btn btn-warning mt-4">
+          <a href="/admin-pengaturan" class="btn btn-secondary mt-4">Refresh</a>
+        </div>
+      </div>
     </form>
 @endforeach
     {{-- <h1>Manajemen Akun Admin</h1>
