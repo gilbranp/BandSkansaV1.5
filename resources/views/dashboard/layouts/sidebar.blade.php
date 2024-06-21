@@ -42,7 +42,7 @@
                Kontak & Pendaftaran
             </a>
           </li>
-          
+
            {{-- @endcan --}}
 
            @can('superadmin')
@@ -52,8 +52,15 @@
               Laporan & Analis
             </a>
           </li>
-        </ul>
           @endcan
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="/presensi">
+              <i class="bi bi-card-checklist text-dark"></i>
+               Presensi
+            </a>
+          </li>
+        </ul>
+          
         <hr class="my-3">
 
         <ul class="nav flex-column mb-auto">
