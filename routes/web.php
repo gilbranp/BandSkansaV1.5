@@ -1,24 +1,25 @@
 <?php
 
-use App\Http\Controllers\AdminCategoryController;
-use App\Http\Controllers\AnggotaController;
-use App\Http\Controllers\BlogPengelolaanController;
-use App\Http\Controllers\CalonAnggotaController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\GaleriDetailController;
-use App\Http\Controllers\PengaturanController;
-use App\Http\Controllers\PengelolaanAdminController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PengelolaanKontenController;
-use App\Http\Controllers\RegisterController;
 use App\Models\Anggota;
-use App\Models\PengelolaanKonten;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\KontakPendafataranController;
-use App\Models\BlogPengelolaan;
 use App\Models\Pengaturan;
+use App\Models\BlogPengelolaan;
+use App\Models\PengelolaanKonten;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PengaturanController;
+use App\Http\Controllers\CalonAnggotaController;
+use App\Http\Controllers\GaleriDetailController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\BlogPengelolaanController;
+use App\Http\Controllers\PengelolaanAdminController;
+use App\Http\Controllers\PengelolaanKontenController;
+use App\Http\Controllers\KontakPendafataranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -140,6 +141,13 @@ Route::resource('/admin-blogpengelolaan',BlogPengelolaanController::class)->midd
 // Route::resource('/admin-categories', AdminCategoryController::class)->except('show')->middleware('admin');
 Route::resource('/admin-pengelolaanadmin', PengelolaanAdminController::class)->middleware('superadmin');
 Route::resource('/admin-calonanggota',CalonAnggotaController::class);
+
+
+// PRESENSI ROUTE
+Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index');
+Route::post('/presensi', [PresensiController::class, 'store'])->name('presensi.store');
+Route::get('/presensi/filter', [PresensiController::class, 'filter'])->name('presensi.filter');
+Route::get('/presensi/print', [PresensiController::class, 'print'])->name('presensi.print');
 
 
 
