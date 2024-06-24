@@ -17,7 +17,7 @@
 <body>
     <main id="cardContainer" style="margin-top: 60px">
         @foreach ($anggota as $anggotaa)
-        <div class="card" >
+        <div style="width: 250;" class="card" >
           <img src="/images/imganggota/{{ $anggotaa->img }}" alt="">
           <div class="card-content">
             <h2>
