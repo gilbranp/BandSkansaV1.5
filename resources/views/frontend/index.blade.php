@@ -827,7 +827,7 @@
 
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                        Jawaban: Latihan band kami dilakukan setiap Senin dan Kamis sore pukul 15.00 - 17.00 di ruang
+                        Jawaban: Latihan band kami dilakukan setiap hari Kamis sore pukul 15.00 - 17.00 di ruang
                         musik sekolah.
                     </div>
                 </div>
@@ -847,7 +847,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
                         Jawaban: Untuk bergabung dengan band, silakan hubungi koordinator ekstrakurikuler musik di ruang
-                        musik sekolah pada hari Senin atau Kamis.
+                        musik sekolah pada hari Kamis/hubungi lewat contact person.
                     </div>
                 </div>
             </div>
@@ -865,7 +865,7 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
-                        Jawaban: Persyaratan utama adalah memiliki minat dalam musik, serta kemauan untuk belajar dan
+                        Jawaban: Persyaratan utama adalah memiliki minat dalam musik,basic skill, serta kemauan untuk belajar dan
                         berkolaborasi dengan anggota band lainnya.
                     </div>
                 </div>
