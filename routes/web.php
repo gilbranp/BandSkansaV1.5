@@ -144,10 +144,10 @@ Route::resource('/admin-calonanggota',CalonAnggotaController::class);
 
 
 // PRESENSI ROUTE
-Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index');
-Route::post('/presensi', [PresensiController::class, 'store'])->name('presensi.store');
-Route::get('/presensi/filter', [PresensiController::class, 'filter'])->name('presensi.filter');
-Route::get('/presensi/print', [PresensiController::class, 'print'])->name('presensi.print');
+Route::get('/presensi', [PresensiController::class, 'index'])->name('presensi.index')->middleware('auth');
+Route::post('/presensi', [PresensiController::class, 'store'])->name('presensi.store')->middleware('auth');
+Route::get('/presensi/filter', [PresensiController::class, 'filter'])->name('presensi.filter')->middleware('auth');
+Route::get('/presensi/print', [PresensiController::class, 'print'])->name('presensi.print')->middleware('auth');
 
 
 
