@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Telp</label>
-                                    <input type="text" name="telp" class="form-control" placeholder="Ex : 08xxxxx"
+                                    <input type="number" name="telp" class="form-control" placeholder="Ex : 08xxxxx"
                                         required>
                                 </div>
                                 <div class="form-group">
