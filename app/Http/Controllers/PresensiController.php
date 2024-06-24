@@ -33,7 +33,7 @@ class PresensiController extends Controller
             );
         }
 
-        return redirect()->route('presensi.index')->with('success', 'Presensi berhasil disimpan.');
+        return redirect()->route('presensi.index')->with('sukses', 'Presensi berhasil disimpan.');
     }
 
     public function filter(Request $request)
