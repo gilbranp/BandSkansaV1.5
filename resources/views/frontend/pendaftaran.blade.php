@@ -1,3 +1,6 @@
+@extends('frontend.layouts.main')
+@section('container')
+<br><br><br><br>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
   <!-- Menggunakan Bootstrap CSS -->
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 
-  <style>
+  {{-- <style>
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f8f9fa;
@@ -36,7 +39,7 @@
       margin-top: 20px;
       display: none; /* Sembunyikan info-box secara default */
     }
-  </style>
+  </style> --}}
 
 </head>
 <body>
@@ -60,8 +63,8 @@
 
         <!-- Alamat Email -->
         <div class="mb-3">
-          <label for="email" class="form-label">Alamat Email</label>
-          <input type="email" class="form-control" id="email" name="email" required>
+          <label for="email" class="form-label">Nomor Wa</label>
+          <input type="number" class="form-control" id="email" name="email" required>
         </div>
 
         <!-- Alat Musik Pilihan -->
@@ -128,6 +131,8 @@
   </div>
 </div>
 
+<br><br>
+
 <!-- Menggunakan Bootstrap JS -->
 <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -138,6 +143,6 @@
     infoBox.style.display = (infoBox.style.display === "none") ? "block" : "none";
   }
 </script>
-
 </body>
 </html>
+@endsection
