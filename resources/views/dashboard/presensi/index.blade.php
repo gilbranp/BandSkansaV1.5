@@ -11,6 +11,11 @@
             <input type="date" class="form-control" id="tanggal" name="tanggal" required>
         </div>
         <table class="table table-bordered">
+            @if (Session::has('sukses'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('sukses') }}
+            </div>
+            @endif
             <thead>
                 <tr>
                     <th>Nama</th>
@@ -22,7 +27,8 @@
                     <tr>
                         <td>{{ $anggota->nama }}</td>
                         <td>
-                            <select name="status[{{ $anggota->id }}]" class="form-select">
+                            <select name="status[{{ $anggota->id }}]" class="form-select" required>
+                                <option disabled selected value="">== KETERANGAN ==</option>
                                 <option value="hadir">Hadir</option>
                                 <option value="ijin">Ijin</option>
                                 <option value="sakit">Sakit</option>
