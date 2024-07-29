@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Anggota;
+use App\Models\Prestasi;
 use App\Models\Pengaturan;
 use App\Models\BlogPengelolaan;
 use App\Models\PengelolaanKonten;
@@ -10,6 +11,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengaturanController;
@@ -39,12 +41,14 @@ use App\Http\Controllers\KontakPendafataranController;
 Route::post('/send-reply', [EmailController::class, 'sendReply']);
 
 Route::get('/', function () {
+    $prestasi = Prestasi::find(1);
     $pengelolaans = PengelolaanKonten::orderBy('created_at', 'DESC')->get();
     $blogpengelolaans = BlogPengelolaan::orderBy('created_at', 'DESC')->get();
     $pengaturans = Pengaturan::find(1);
     // @dd($pengaturans);
     return view('./frontend.index',[
       'pengelolaans' => $pengelolaans,
+      'prestasi' => $prestasi,
       'pengaturan' => $pengaturans,
       'blogpengelolaans' => $blogpengelolaans,
         'title'=> 'Beranda'
@@ -136,7 +140,7 @@ Route::resource('/admin-anggota', AnggotaController::class)->middleware('auth');
 // Route::resource('/admin-edit', AnggotaController::class)->middleware('auth');
 Route::resource('/admin-kontakpendafataran', KontakPendafataranController::class)->middleware('auth');
 Route::resource('/galeridetail',GaleriDetailController::class);
-Route::resource('/admin-pengaturan',PengaturanController::class)->middleware('superadmin');
+Route::resource('/admin-pengaturan',PengaturanController::class);
 Route::resource('/admin-blogpengelolaan',BlogPengelolaanController::class)->middleware('auth');
 // Route::resource('/admin-categories', AdminCategoryController::class)->except('show')->middleware('admin');
 Route::resource('/admin-pengelolaanadmin', PengelolaanAdminController::class)->middleware('superadmin');
@@ -149,6 +153,7 @@ Route::post('/presensi', [PresensiController::class, 'store'])->name('presensi.s
 Route::get('/presensi/filter', [PresensiController::class, 'filter'])->name('presensi.filter')->middleware('auth');
 Route::get('/presensi/print', [PresensiController::class, 'print'])->name('presensi.print')->middleware('auth');
 
+Route::resource('/admin-prestasi',PrestasiController::class)->middleware('auth');
 
 
 
