@@ -3,6 +3,7 @@
       <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
       <li><a class="nav-link scrollto" href="#about">Profil Band</a></li>
       <li><a class="nav-link scrollto" href="#services">Jadwal Latihan</a></li>
+      <li><a class="nav-link scrollto" href="#prestasi">Prestasi</a></li>
       <li><a class="nav-link scrollto " href="#work">Galeri</a></li>
       <li><a class="nav-link scrollto " href="#blog">Blog</a></li>
       <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
