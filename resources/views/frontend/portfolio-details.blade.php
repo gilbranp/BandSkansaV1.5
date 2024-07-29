@@ -129,7 +129,7 @@
                 <li><strong>Acara</strong>: {{ $pengelolaan->namaacara }}</li>
                 <li><strong>Tempat</strong>: {{ $pengelolaan->tempat }}</li>
                 <li><strong>Tanggal</strong>: {{ $pengelolaan->tanggal }}</li>
-                <li><strong>Link Vidio</strong>: <a href="{{ $pengelolaan->url }}">{{ $pengelolaan->url }}</a></li>
+                <li><strong>Link Vidio</strong>: <a target="_blank" href="{{ $pengelolaan->url }}">{{ $pengelolaan->url }}</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
