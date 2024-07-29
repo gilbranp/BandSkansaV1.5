@@ -281,6 +281,67 @@
 
         </section><!-- End Services Section -->
 
+        {{-- Prestasi Section --}}
+
+            <style>
+        .custom-textarea {
+            overflow-y: scroll;
+        }
+    </style>
+        <section id="prestasi" class="pt-5 route pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title-box text-center">
+                            <h3 class="title-a">
+                                Prestasi
+                            </h3>
+                            <p class="subtitle-a">
+                                Prestasi dan pencapaian ekstra band
+                            </p>
+                            <div class="line-mf"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+
+                <style>
+                    .custom-textarea {
+                        height: calc(15 * 1.5em); /* Set height to 15 rows */
+                    }
+                </style>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea name="deskripsi" id="editor" class="form-control custom-textarea" rows="15" readonly>{{ $prestasi->deskripsi }}</textarea>
+                        <div id="htmlDisplay" class="form-control custom-textarea" style="display: none;"></div>
+                    </div>
+                </div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var editor = document.getElementById('editor');
+                        var htmlDisplay = document.getElementById('htmlDisplay');
+                
+                        // Salin konten dari textarea
+                        var content = editor.value;
+                
+                        // Set konten dalam div sebagai HTML
+                        htmlDisplay.innerHTML = content;
+                
+                        // Sembunyikan textarea dan tampilkan div
+                        editor.style.display = 'none';
+                        htmlDisplay.style.display = 'block';
+                    });
+                </script>
+                
+                
+              
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        </section>
+        {{-- End Prestasi section --}}
         <!-- ======= Counter Section ======= -->
         <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
             <div class="overlay-mf"></div>
