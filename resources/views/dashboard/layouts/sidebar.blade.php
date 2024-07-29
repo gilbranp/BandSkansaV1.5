@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
     <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
       <div class="offcanvas-header">
@@ -26,6 +29,15 @@
               Jadwal Latihan
             </a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2" href="/admin-prestasi">
+                <i style="color: black" class="fas fa-trophy"></i>
+                Prestasi
+            </a>
+        </li>
+        
+
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="/admin-pengelolaankonten">
               <svg class="bi"><use xlink:href="#file-earmark"/></svg>
